@@ -1,0 +1,4 @@
+https://github.com/andersonrock2496-ops/industrial-photo-report-generator/blob/main/README.md
+https://github.com/andersonrock2496-ops/splunk-soc-kali/tree/main
+https://github.com/andersonrock2496-ops/DIO_bootcamp/tree/main/ETE_ETA_supervisorio
+https://github.com/andersonrock2496-ops/blue-team-portfolio

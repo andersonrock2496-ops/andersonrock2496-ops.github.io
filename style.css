@@ -1,0 +1,362 @@
+:root {
+    --background: #f5f7fa;
+    --surface: #ffffff;
+    --surface-alternate: #eef2f6;
+    --text: #17212b;
+    --text-soft: #52606d;
+    --primary: #145c74;
+    --primary-dark: #0d4254;
+    --border: #d9e2e8;
+    --shadow: 0 14px 35px rgba(23, 33, 43, 0.08);
+    --radius: 18px;
+    --max-width: 1120px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    color: var(--text);
+    background: var(--background);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(100% - 32px, var(--max-width));
+    margin-inline: auto;
+}
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid var(--border);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.logo {
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-links a {
+    color: var(--text-soft);
+    font-weight: 600;
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.menu-button {
+    display: none;
+    border: 0;
+    background: transparent;
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+
+.hero {
+    min-height: 78vh;
+    display: grid;
+    place-items: center;
+    padding: 100px 0 80px;
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(20, 92, 116, 0.17),
+            transparent 35%
+        ),
+        linear-gradient(180deg, #ffffff, var(--background));
+}
+
+.hero-content {
+    max-width: 900px;
+}
+
+.eyebrow,
+.section-label,
+.project-category {
+    color: var(--primary);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    font-size: 0.78rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.15;
+    letter-spacing: -0.035em;
+}
+
+h1 {
+    max-width: 950px;
+    margin: 18px 0 24px;
+    font-size: clamp(2.6rem, 7vw, 5.7rem);
+}
+
+h2 {
+    max-width: 800px;
+    margin: 10px 0 24px;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+h3 {
+    margin-top: 0;
+    font-size: 1.35rem;
+}
+
+.hero-description,
+.section-introduction {
+    max-width: 780px;
+    color: var(--text-soft);
+    font-size: 1.1rem;
+}
+
+.hero-actions,
+.contact-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 32px;
+}
+
+.button,
+.contact-links a {
+    display: inline-flex;
+    min-height: 48px;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 800;
+    transition:
+        transform 0.2s ease,
+        background 0.2s ease,
+        color 0.2s ease;
+}
+
+.button:hover,
+.contact-links a:hover {
+    transform: translateY(-2px);
+}
+
+.button.primary {
+    color: white;
+    background: var(--primary);
+}
+
+.button.primary:hover {
+    background: var(--primary-dark);
+}
+
+.button.secondary,
+.contact-links a {
+    border: 1px solid var(--border);
+    background: var(--surface);
+}
+
+.section {
+    padding: 88px 0;
+}
+
+.alternate {
+    background: var(--surface-alternate);
+}
+
+.card-grid,
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.card,
+.project-card {
+    padding: 28px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--surface);
+    box-shadow: var(--shadow);
+}
+
+.card p,
+.project-card p,
+.contact-section p {
+    color: var(--text-soft);
+}
+
+.project-card {
+    min-height: 330px;
+    display: flex;
+}
+
+.project-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-content a {
+    margin-top: auto;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 18px 0 26px;
+}
+
+.tags span {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--surface-alternate);
+    font-size: 0.82rem;
+    font-weight: 700;
+}
+
+.accordion {
+    display: grid;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+details {
+    padding: 20px 22px;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    background: var(--surface);
+}
+
+summary {
+    cursor: pointer;
+    font-weight: 800;
+}
+
+details ul {
+    margin-bottom: 0;
+    color: var(--text-soft);
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.contact-section h2,
+.contact-section p {
+    margin-inline: auto;
+}
+
+.contact-links {
+    justify-content: center;
+}
+
+.footer {
+    padding: 28px 0;
+    color: var(--text-soft);
+    text-align: center;
+    border-top: 1px solid var(--border);
+    background: var(--surface);
+}
+
+@media (max-width: 860px) {
+    .card-grid,
+    .project-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 16px;
+        right: 16px;
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px;
+        border: 1px solid var(--border);
+        border-radius: 14px;
+        background: var(--surface);
+        box-shadow: var(--shadow);
+    }
+
+    .nav-links.open {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 12px;
+    }
+}
+
+@media (max-width: 620px) {
+    .card-grid,
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+        padding-top: 78px;
+    }
+
+    .section {
+        padding: 68px 0;
+    }
+
+    .button {
+        width: 100%;
+    }
+}

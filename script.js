@@ -45,7 +45,8 @@ async function carregarProjetos() {
       !repo.fork &&
       !repo.archived &&
       repo.name !== `${GITHUB_USER}.github.io` &&
-      repo.topics.includes("portfolio")
+     Array.isArray(repo.topics) &&
+        repo.topics.includes("portfolio")
     );
 
     container.replaceChildren();
